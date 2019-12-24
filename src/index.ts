@@ -4,8 +4,8 @@ import bodyparser = require('body-parser')
 import session = require('express-session')
 import alert = require('alert-node')
 import Router = require('router')
-import User = require('./lib/user')
-import Metrics = require('./lib/metrics')
+import User = require('../lib/user')
+import Metrics = require('../lib/metrics')
 
 const router = Router()
 const app = express()
@@ -27,9 +27,9 @@ db.on('error', console.log.bind(console, "connection error"));
 db.once('open', function (callback) {
     console.log("Connection succeeded");
     //populate the database with 3 users when starting the app
-    var newUsers = [{ firstName: 'Mathieu', lastname: 'Claverie', username: 'Mat', password: '123'},
-                    { firstName: 'Alexandre', lastname: 'Loba', username: 'Alex', password: '456'},
-                    { firstName: 'Iandraina', lastname: 'Ravelomanana', username: 'Ian', password: '789'} ];
+    var newUsers = [{ firstName: 'Mathieu', lastname: 'Claverie', username: 'Mat', password: '123',metrics:[[1577216279,1],[1577216265,10],[1577216278,5]]},
+                    { firstName: 'Alexandre', lastname: 'Loba', username: 'Alex', password: '456',metrics:[[1577246279,3],[1511216265,4],[1577216578,6]]},
+                    { firstName: 'Iandraina', lastname: 'Ravelomanana', username: 'Ian', password: '789',metrics:[[1147216279,6],[1123216265,7],[1548616278,9]]} ];
 
     User.collection.insert(newUsers, function (err, savedUser) {
         if (err) {

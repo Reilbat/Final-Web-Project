@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.com/Reilbat/Final-Web-Project.svg?branch=master)](https://travis-ci.com/Reilbat/Final-Web-Project.svg?branch=master)
-
-# Final-Web-Project
+# finale-project
 
 ## THE PROJECT
 The project in itself is a web API with a dashboard that should allow to :
@@ -23,7 +21,7 @@ npm run build
 To make the projet run you have to type in your terminal : 
 
 ```
-npm start
+npm run dev or npm start
 ```
 
 ### Test
