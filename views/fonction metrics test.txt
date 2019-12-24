@@ -1,0 +1,9 @@
+<form action="/myMetrics" style="margin-left:40% ; margin-right:40%; margin-top:10%">
+		<div id="welcomeDiv" style="display:none;" class="answer_list"> WELCOME</div>
+		<input type="button" name="answer" value="Show Div" onclick="showDiv()" />
+		<script>
+			function showDiv() {
+				document.getElementById('welcomeDiv').style.display = "block";
+			}
+		</script>
+	</form>

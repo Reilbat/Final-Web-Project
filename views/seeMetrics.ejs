@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="io-=edge">
+	<title>Metrics</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+</head>
+
+<style>
+	body {
+		padding-top: 80px;
+		background-color: darkgoldenrod;
+	}
+
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "Comic Sans MS", cursive, sans-serif;
+	}
+</style>
+
+<body>
+	<ul class="nav justify-content-center" style="margin-left:80% ; margin-right:10%; margin-top:1%	">
+		<li class="nav-item">
+			<a class="btn btn-primary btn-lg active" role="button" href="myMetrics">BACK</a>
+		</li>
+	</ul>
+	<canvas id="myChart" width="2700" height="2800"></canvas>
+	<script>
+		var ctx = document.getElementById('myChart');
+		ctx.height = 1100;
+		var myChart = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: [, '1546387199', '1546387189', '1551484799 ', '1562025599', '1556755199 ', '1549065599 ', '1559433599 ', '1554163199 '],
+				datasets: [{
+					label: '# Metrics',
+					data: [2, 10, 3, 7, 9, 6, 1, 4, 5, 3, 7, 5, 4, 5, 6, 7, 8, 6, 8, 9, 10],
+					backgroundColor: [
+						'rgba(169,169,169, 0.2)',
+						'rgba(169,169,169, 0.2)',
+						'rgba(169,169,169, 0.2)',
+						'rgba(169,169,169, 0.2)',
+						'rgba(169,169,169, 0.2)',
+						'rgba(169,169,169, 0.2)'
+					],
+					borderColor: [
+						'rgba(192,192,192, 1)',
+						'rgba(192,192,192, 1)',
+						'rgba(192,192,192, 1)',
+						'rgba(192,192,192, 1)',
+						'rgba(192,192,192, 1)',
+						'rgba(192,192,192, 1)'
+					],
+					borderWidth: 5
+				}]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: false
+						}
+					}],
+					xAxes: [{
+						barThickness: 50
+					}]
+				}
+			}
+		});
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
